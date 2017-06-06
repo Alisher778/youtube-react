@@ -1,0 +1,18 @@
+.container-fluid{
+	margin: 0;
+	padding: 0;
+}
+
+nav{
+	height: 60px;
+}
+
+.search{
+	margin: 15px auto;
+    display: block;
+    height: 26px;
+    font-size: 1.2em;
+    width: 66%;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}

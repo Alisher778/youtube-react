@@ -5,7 +5,11 @@ export default class App extends Component {
 	render() {
 		return (
 
-				<h1>Hello React</h1>
+				<div className="btn-primary">
+
+					<button className="btn-lg btn-alert">Hello</button>
+					Hello React
+				</div>
 			)
 	}
 }

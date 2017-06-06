@@ -54,11 +54,21 @@ export default class App extends Component {
 					<nav className="navbar navbar-default">
 						<input type="search"  onChange={this.onChange.bind(this)} defaultValue={this.state.searchTerm} className="search"/>
 					</nav>
-					<div class="container">
+					<div className="container">
 						<ul id="results" className="list-group">
+						
 						{videoResults.map((video, i)=> {
 							if(video.id.playlistId){
-								return <li key={i} className="list-group-item"><iframe src={`https://www.youtube.com/embed/videoseries?list=${video.id.playlistId}`}></iframe></li>
+								return		<li key={i} className="list-group-item">
+											<div className="media-left">
+												<iframe src={`https://www.youtube.com/embed/videoseries?list=${video.id.playlistId}`} className="media-object embed-responsive-item"></iframe>
+											</div>
+											<div className="media-body">
+    											<h4 className="media-heading">{video.snippet.title}</h4>
+ 												<a href="#">{video.snippet.channelTitle}</a>
+ 												<p>{video.snippet.description}</p>
+  											</div>
+										</li>
 							}else{
 								return <li key={i} className="list-group-item">
 											<div className="media-left">
